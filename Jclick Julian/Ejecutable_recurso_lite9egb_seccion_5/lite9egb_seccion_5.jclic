@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JClicProject name="lite9egb_seccion_5" version="0.1.3">
+ <settings>
+  <title>Lite9EGB_Sección_5</title>
+  <revision description="created" date="11/9/25" />
+  <author name="Julian Altamirano" mail="julian.altamirano" rol="Docente" organization="Unach" />
+  <description>
+   <p>Ejercitador complementario de la Sección 5 del libro de literatura del ministerio de educación de Ecuador</p>
+  </description>
+  <descriptors />
+  <cover file="portada-resized.jpg" />
+  <meta_langs>es</meta_langs>
+  <descriptions>
+   <description language="es">
+    <p>Ejercitador complementario de la Sección 5 del libro de literatura del ministerio de educación de Ecuador</p>
+   </description>
+  </descriptions>
+  <license type="by-nc-sa" url="https://creativecommons.org/licenses/by-nc-sa/4.0" />
+ </settings>
+ <sequence>
+  <item id="start" name="Portada" />
+  <item name="menù" />
+  <item name="L1A1" />
+  <item name="L1A2" />
+  <item name="A1L2" />
+  <item name="Sm_1" />
+  <item name="Sm_2" />
+  <item name="Sm_3" />
+  <item name="Créditos" />
+  <item name="A2L2" />
+  <item name="A3L2" />
+  <item name="T3L1" />
+  <item name="T3L2" />
+  <item name="T3L3" />
+  <item name="L1A3">
+   <jump action="STOP" id="forward" />
+   <jump action="STOP" id="back" />
+  </item>
+ </sequence>
+ <activities>
+  <activity class="@panels.InformationScreen" name="Portada" code="">
+   <description />
+   <messages>
+    <cell border="true" type="initial">
+     <style />
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="menù" />
+     <p>Bienvenid@,da click en cualquier parte de la imagen para iniciar. </p>
+    </cell>
+    <cell type="final">
+     <style />
+    </cell>
+   </messages>
+   <settings margin="4" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFFFFFF" dest="0x0D1D51" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="portada-resized.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="menù" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Elija una opciòn para trabajar </p>
+    </cell>
+   </messages>
+   <settings margin="1" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFFFFFF" dest="0x0D1D51" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x3366FF" dest="0xFFFFFF" angle="0" />
+    </window>
+   </settings>
+   <cells rows="4" cols="1" cellWidth="400.0" cellHeight="50.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <gradient source="0x0000CC" dest="0xFFFFFF" angle="0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="Sm_1" />
+     <p>Comprensión de textos literarios</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="Sm_2" />
+     <p> Géneros y textos Literarios</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="Sm_3" />
+     <p>Recreación de textos. literarios</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="Créditos" />
+     <p>Créditos</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@memory.MemoryGame" name="A1L2" code="">
+   <description>
+    <p>Un juego de memoria clásico donde el estudiante debe encontrarorgnizar los diferectes tipos d egeneros literiafrios</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Ordena el tipo de género literario y su avatar. </p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="A2L2" />
+     <p>¡Correcto, lo lograste!, vamos con la siguiente actividad.</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>⚠️ ¡Ups!, Error, inténtalo de nuevo.</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0x660066">
+     <gradient source="0xFFFFFF" dest="0x330033" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="3" border="true" image="unnamed-resized.jpg" id="primary">
+    <style borderStroke="3.4" markerStroke="2.7">
+     <color background="0xFFFFFF" shadow="0x990099" border="0xFFFFFF" />
+    </style>
+    <shaper class="@TriangularJigSaw" cols="3" rows="1" />
+   </cells>
+   <scramble times="31" />
+   <layout position="AUB" />
+  </activity>
+  <activity class="@associations.SimpleAssociation" name="A3L2" code="">
+   <description>
+    <p>El estudiante ve tres "cajas" que representan los géneros principales. Debe arrastrar los títulos de las obras listadas a la caja del género que le corresponde.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Debes arrastrar los títulos de las obras listadas a la caja del género que le corresponde.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="Sm_3" />
+     <p>¡Correcto, lo lograste!, vamos con la siguiente Unidad.</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>⚠️ ¡Ups!, Error, inténtalo de nuevo.</p>
+    </cell>
+   </messages>
+   <settings margin="1" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFFFFFF" dest="0x330033" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="3" cellWidth="100.0" cellHeight="100.0" border="true" id="primary">
+    <style>
+     <color background="0xFFFFFF" border="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>Narrativa</p>
+    </cell>
+    <cell>
+     <p>Lírico</p>
+    </cell>
+    <cell>
+     <p>Dramático</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="100.0" cellHeight="100.0" border="true" id="secondary">
+    <style borderStroke="0.7" markerStroke="2.7">
+     <color background="0xFFFFFF" border="0xFFFF00" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <cell>
+     <p>La fundación de Tenochtitlán</p>
+    </cell>
+    <cell>
+     <p>El origen del fuego</p>
+    </cell>
+    <cell>
+     <p>Cumandá</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Sm_1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Elija una opciòn para trabajar </p>
+    </cell>
+   </messages>
+   <settings margin="1" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFFFFFF" dest="0x0D1D51" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x3366FF" dest="0xFFFFFF" angle="0" />
+    </window>
+   </settings>
+   <cells rows="4" cols="1" cellWidth="400.0" cellHeight="50.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <gradient source="0x0000CC" dest="0xFFFFFF" angle="0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="L1A1" />
+     <p>Actividad 1</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="L1A2" />
+     <p>Actividad 2</p>
+    </cell>
+    <cell>
+     <p>Actividad 3</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="menù" />
+     <p>Menù principal</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Sm_2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Elija una opciòn para trabajar </p>
+    </cell>
+   </messages>
+   <settings margin="1" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFFFFFF" dest="0x0D1D51" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x3366FF" dest="0xFFFFFF" angle="0" />
+    </window>
+   </settings>
+   <cells rows="4" cols="1" cellWidth="400.0" cellHeight="50.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <gradient source="0x0000CC" dest="0xFFFFFF" angle="0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="A1L2" />
+     <p>Actividad 1</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="A2L2" />
+     <p>Actividad 2</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="A3L2" />
+     <p>Actividad 3</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="menù" />
+     <p>Menù principal</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@panels.InformationScreen" name="Sm_3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Elija una opciòn para trabajar </p>
+    </cell>
+   </messages>
+   <settings margin="1" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFFFFFF" dest="0x0D1D51" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" border="true">
+     <gradient source="0x3366FF" dest="0xFFFFFF" angle="0" />
+    </window>
+   </settings>
+   <cells rows="4" cols="1" cellWidth="400.0" cellHeight="50.0" border="true">
+    <style borderStroke="0.7" markerStroke="5.0">
+     <gradient source="0x0000CC" dest="0xFFFFFF" angle="0" />
+    </style>
+    <shaper class="@Rectangular" cols="1" rows="4" />
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="T3L1" />
+     <p>Actividad 1</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="T3L2" />
+     <p>Actividad 2</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="T3L3" />
+     <p>Actividad 3</p>
+    </cell>
+    <cell>
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="menù" />
+     <p>Menù principal</p>
+    </cell>
+   </cells>
+  </activity>
+  <activity class="@associations.ComplexAssociation" name="L1A1" code="">
+   <description>
+    <p>Un juego para conectar a los personajes de los fragmentos de La Ilíada y La Odisea con sus descripciones o acciones clave.</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Conecta a los personajes de los fragmentos de La Ilíada y La Odisea con sus descripciones o acciones clave.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="L1A2" />
+     <p>¡Correcto, lo lograste!, vamos con la siguiente actividad.</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>⚠️ ¡Ups!, Error, inténtalo de nuevo.</p>
+    </cell>
+   </messages>
+   <settings margin="1" report="true" reportActions="false">
+    <container bgColor="0xCCCCFF">
+     <gradient source="0xFFFFFF" dest="0x0D1D51" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="2" cols="3" cellWidth="200.0" cellHeight="50.0" border="true" id="primary">
+    <style margin="1">
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell id="0">
+     <p>Aquiles </p>
+    </cell>
+    <cell id="1">
+     <p>Agamenón </p>
+    </cell>
+    <cell id="2">
+     <p>Odiseo </p>
+    </cell>
+    <cell id="3">
+     <p>Atenea </p>
+    </cell>
+    <cell id="4">
+     <p>Poseidón</p>
+    </cell>
+    <cell id="5">
+     <p>Ninguno</p>
+    </cell>
+   </cells>
+   <cells rows="2" cols="3" cellWidth="200.0" cellHeight="50.0" border="true" id="secondary">
+    <style margin="1">
+     <color background="0xFFFFFF" />
+    </style>
+    <shaper class="@Rectangular" cols="3" rows="2" />
+    <cell>
+     <p>el de los pies ligeros</p>
+    </cell>
+    <cell>
+     <p>el rey de hombres</p>
+    </cell>
+    <cell>
+     <p>detenido en hueca gruta por Calipso</p>
+    </cell>
+    <cell>
+     <p>exhorta a Telémaco</p>
+    </cell>
+    <cell>
+     <p>constantemente irritado contra el divinal Odiseo</p>
+    </cell>
+    <cell>
+     <p>Ninguno</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="true" secondary="true" />
+   <layout position="AB" />
+  </activity>
+  <activity class="@text.FillInBlanks" name="L1A2" code="">
+   <description>
+    <p>Una actividad para completar los versos del poema de Rosalía de Castro con las palabras correctas</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Rellena con las palabras correctas, para completar los versos del poema de Rosalía de Castro. </p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="L1A3" />
+     <p>¡Correcto, lo lograste!, vamos con la siguiente actividad.</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>⚠️ ¡Ups! 😅 Error, inténtalo de nuevo.</p>
+    </cell>
+   </messages>
+   <settings margin="2" report="true" reportActions="false">
+    <container bgColor="0x0066CC">
+     <gradient source="0xFFFFFF" dest="0x003366" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true">
+     <size width="400" height="101" />
+    </window>
+   </settings>
+   <document>
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="default" family="Arial" background="0xFFFFFF" size="11" bold="false" italic="false" tabWidth="12" />
+    <section>
+     <p family="Arial" background="0xFFFFFF" Alignment="1">
+      <text size="12">"Cuando imagino que te has ido, en el mismo </text>
+      <target>
+       <answer>sol</answer>
+       <response fill="_" length="3" maxLength="3" />
+       <text>sol</text>
+      </target>
+      <text size="12"> te me muestras".</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" Alignment="1" />
+     <p family="Arial" background="0xFFFFFF" Alignment="1">
+      <text size="12">"y eres la </text>
+      <target>
+       <answer>estrella</answer>
+       <response fill="_" length="8" maxLength="8" />
+       <text>estrella</text>
+      </target>
+      <text size="12"> que brilla, y eres el viento que zumba".</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF" Alignment="1" />
+     <p family="Arial" background="0xFFFFFF" Alignment="1">
+      <text size="12">"y eres el murmullo del río y eres la noche y eres la </text>
+      <target>
+       <answer>aurora</answer>
+       <response fill="_" length="6" maxLength="6" />
+       <text>aurora</text>
+      </target>
+      <text size="12">"</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@puzzles.ExchangePuzzle" name="L1A3" code="">
+   <description>
+    <p>El estudiante debe arrastrar frases y conceptos clave de los fragmentos leídos y soltarlos en la categoría correcta: "La Ilíada" o "La Odisea".</p>
+   </description>
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Ordena para identificar la escena de la obra "La Iliada".</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="Sm_2" />
+     <p>¡Correcto, lo lograste!, vamos con la siguiente Unidad.</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>⚠️ ¡Ups!, Error, inténtalo de nuevo.</p>
+    </cell>
+   </messages>
+   <settings margin="1" dragCells="true" report="true" reportActions="false">
+    <container bgColor="0x000033">
+     <gradient source="0xFFFFFF" dest="0x0D1D51" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xFFFFFF" border="true" />
+   </settings>
+   <cells rows="2" cols="3" border="true" image="Iliada-resized.jpg">
+    <style borderStroke="4.1" markerStroke="2.7">
+     <color foreground="0xFFFFFF" background="0xFFFFFF" inactive="0xFFFFFF" border="0xFFFFFF" />
+    </style>
+    <shaper class="@ClassicJigSaw" cols="3" rows="2" />
+   </cells>
+   <scramble times="31" />
+  </activity>
+  <activity class="@panels.InformationScreen" name="Créditos" code="">
+   <description />
+   <messages>
+    <cell avoidOverlapping="true" type="initial">
+     <style />
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="menù" />
+     <p>Da click en la imagen para regresar al menù</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFFFFFF" dest="0x330033" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="1" border="true" image="créditos-resized.jpg">
+    <style />
+    <shaper class="@Rectangular" cols="1" rows="1" />
+   </cells>
+  </activity>
+  <activity class="@textGrid.WordSearch" name="A2L2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Encuentra los siguientes textos literarios Ecuatorianos.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="A3L2" />
+     <p>¡Correcto, lo lograste!, vamos con la siguiente actividad.</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>⚠️ ¡Ups!, Error, inténtalo de nuevo.</p>
+    </cell>
+   </messages>
+   <settings margin="1" report="true" reportActions="false">
+    <container bgColor="0xFFFFCC">
+     <gradient source="0xFFFFFF" dest="0x330033" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <textGrid rows="12" columns="12" cellWidth="20.0" cellHeight="20.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>ABCS********</row>
+     <row>DEFSS*CC****</row>
+     <row>GHIABC*U****</row>
+     <row>*******M****</row>
+     <row>*******A****</row>
+     <row>HUASIPUNGO**</row>
+     <row>*******D****</row>
+     <row>*******Á****</row>
+     <row>************</row>
+     <row>************</row>
+     <row>************</row>
+     <row>************</row>
+    </text>
+   </textGrid>
+   <clues>
+    <clue id="0">CUMANDÁ</clue>
+    <clue id="1">HUASIPUNGO</clue>
+   </clues>
+  </activity>
+  <activity class="@text.Complete" name="T3L1" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Completa el párrafo de La Ilíada con las tres palabras restantes.</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="T3L2" />
+     <p>¡Correcto, lo lograste!, vamos con la siguiente actividad.</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>⚠️ ¡Ups! 😅 Error, inténtalo de nuevo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFFFFFF" dest="0x330033" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <checkButton />
+   <document>
+    <style name="targetError" base="target" foreground="0xFF0000" />
+    <style name="target" base="default" foreground="0x0000FF" target="true" />
+    <style name="default" family="Arial" background="0xFFFFFF" size="11" bold="false" italic="false" tabWidth="12" />
+    <section>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="12">Me eres más odioso que ningún otro de los reyes, alumnos de </text>
+      <target>Zeus</target>
+      <text size="12">, porque siempre te han</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="12">gustado las riñas, luchas y peleas. Si es grande tu fuerza, un dios te la dio. Vete a la patria,</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="12">llevándote las naves y los compañeros, y reina sobre los mirmidones: no me cuido de que estés</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="12">irritado, ni por ello me preocupo, pero te haré una amenaza: Puesto que Febo </text>
+      <target>Apolo</target>
+      <text size="12"> me quita</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="12">a </text>
+      <target>Criseida</target>
+      <text size="12">, la mandaré en mi nave con mis amigos; y encaminándome yo mismo</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="12">a tu tienda, me llevaré a Briseida, la de hermosas mejillas, tu recompensa, para que sepas</text>
+     </p>
+     <p family="Arial" background="0xFFFFFF">
+      <text size="12">cuánto más poderoso soy y otro tema decir que es mi igual y compararse conmigo”.</text>
+     </p>
+    </section>
+   </document>
+   <evaluator class="@ComplexEvaluator" />
+  </activity>
+  <activity class="@textGrid.CrossWord" name="T3L2" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Completa el Crucigrama</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="T3L3" />
+     <p>¡Correcto, lo lograste!, vamos con la siguiente actividad.</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>⚠️ ¡Ups! 😅 Error, inténtalo de nuevo.</p>
+    </cell>
+   </messages>
+   <settings margin="8" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFFFFFF" dest="0x330033" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <textGrid rows="9" columns="10" cellWidth="20.0" cellHeight="20.0" border="true">
+    <style>
+     <color background="0xFFFFFF" />
+    </style>
+    <text>
+     <row>******N**</row>
+     <row>HOMEROA**</row>
+     <row>******R**</row>
+     <row>******R**</row>
+     <row>******A**</row>
+     <row>******T**</row>
+     <row>******I**</row>
+     <row>******V**</row>
+     <row>******A**</row>
+     <row>*********</row>
+    </text>
+   </textGrid>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="60.0" border="true" id="acrossClues">
+    <style />
+    <shaper class="@Rectangular" cols="3" rows="1" />
+    <ids>0 0 0 0 9 8 8 7 7 6 6 5 5 4 4 3 3 2 2 0 0 1 0 1 2</ids>
+   </cells>
+   <cells rows="1" cols="3" cellWidth="200.0" cellHeight="60.0" border="true" id="downClues">
+    <style />
+    <cell id="0" item="1" />
+    <cell id="6" item="1">
+     <p>Gènero literario que narra una historia</p>
+    </cell>
+    <cell id="6" item="0" />
+    <cell id="5" item="1" />
+    <cell id="5" item="0" />
+    <cell id="4" item="1" />
+    <cell id="4" item="0" />
+    <cell id="2" item="0" />
+    <cell id="1" item="0" />
+    <cell id="3" item="1" />
+    <cell id="3" item="0" />
+    <cell id="0" item="0" />
+    <cell id="0" />
+    <cell id="1" />
+    <cell id="2" />
+   </cells>
+   <layout position="AUB" />
+  </activity>
+  <activity class="@text.WrittenAnswer" name="T3L3" code="">
+   <description />
+   <messages>
+    <cell type="initial">
+     <style />
+     <p>Responde a las dos preguntas, con la palabra Verdad o Falso</p>
+    </cell>
+    <cell type="final">
+     <style />
+     <media type="RUN_CLIC_ACTIVITY" level="1" file="menù" />
+     <p>Hemos terminado, regresaremos al menù principal</p>
+    </cell>
+    <cell type="finalError">
+     <style />
+     <p>⚠️ ¡Ups! 😅 Error, inténtalo de nuevo.</p>
+    </cell>
+   </messages>
+   <settings margin="0" report="true" reportActions="false">
+    <container bgColor="0xC0C0C0">
+     <gradient source="0xFFFFFF" dest="0x330033" angle="0" />
+     <counters time="true" actions="true" score="true" />
+    </container>
+    <window bgColor="0xC0C0C0" transparent="true" border="true" />
+   </settings>
+   <cells rows="1" cols="2" cellWidth="200.0" cellHeight="200.0" border="true" id="primary">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell id="0">
+     <style transparent="true" />
+     <p>¿Creès que las  infografías nos ayudan a socializar los diferentes textos literarios?</p>
+    </cell>
+    <cell id="1">
+     <style transparent="true" />
+     <p>¿Leer te daña el cerebro?</p>
+    </cell>
+   </cells>
+   <cells rows="1" cols="2" cellWidth="100.0" cellHeight="26.0" border="true" id="answers">
+    <style />
+    <shaper class="@Rectangular" cols="2" rows="1" />
+    <cell>
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Verdad</p>
+    </cell>
+    <cell>
+     <style>
+      <color background="0xFFFFFF" />
+     </style>
+     <p>Falso</p>
+    </cell>
+   </cells>
+   <scramble times="31" primary="false" />
+   <layout position="AB" />
+  </activity>
+ </activities>
+ <mediaBag>
+  <media name="créditos-resized.jpg" file="creditos-resized.jpg" />
+  <media name="Iliada-resized.jpg" file="iliada-resized.jpg" />
+  <media name="portada-resized.jpg" file="portada-resized.jpg" />
+  <media name="unnamed-resized.jpg" file="unnamed-resized.jpg" />
+ </mediaBag>
+</JClicProject>
+

@@ -1,0 +1,35 @@
+{
+  "title": "Lite9EGB_Sección_5",
+  "author": "Julian Altamirano (Docente)",
+  "date": "9/11/25",
+  "description": {
+    "es": "Ejercitador complementario de la Sección 5 del libro de literatura del ministerio de educación de Ecuador"
+  },
+  "license": {
+    "es": "Esta obra está bajo una licencia de Creative Commons <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0\">BY-NC-SA<\/a>"
+  },
+  "meta_langs": [
+    "es"
+  ],
+  "cover": "portada-resized.jpg",
+  "mainFile": "lite9egb_seccion_5.jclic",
+  "thumbnail": "project-thumb.jpg",
+  "activities": 15,
+  "mediaFiles": 8,
+  "totalSize": 299829,
+  "files": [
+    "creditos-resized.jpg",
+    "favicon.ico",
+    "icon-192.png",
+    "icon-72.png",
+    "iliada-resized.jpg",
+    "imsmanifest.xml",
+    "index.html",
+    "lite9egb_seccion_5.jclic",
+    "lite9egb_seccion_5.jclic.js",
+    "portada-resized.jpg",
+    "project-thumb.jpg",
+    "project.json",
+    "unnamed-resized.jpg"
+  ]
+}
